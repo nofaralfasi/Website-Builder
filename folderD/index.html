@@ -22,11 +22,11 @@
                 $('#load').removeAttr('disabled');
             }
             $('#info1').click(function () {
-                infoPage = new Messi("<div style=\"text-align: center;\">First thing First:<div style=\"text-align: center;\"> <br> Please edit the other pages <h5> before you edit the main page !!!</h5>  by click on \"press to add a page\"" +
+                infoPage = new Messi("<div style=\"text-align: center; font-size: 14px;\">First thing First:<div style=\"text-align: center;\"> <br> Please edit the other pages <h5> before you edit the main page !!!</h5>  by click on \"press to add a page\"" +
                     " and than a pop up will be pop. and you will  have to enter a name,press the ok button  and a link will be added" +
                     " to the main page , press on him " +
                     " and it will take you to the other page to be edited,when you done  <h4>press submit and press on \"return to main page\ </h4> which will bring you back to this page." +
-                    " after that  press the <h6>load button to bring you back to last state !!! </h6>after you finish to edit all the other linked pages then you can  edit your main page" +
+                    " after that  press the <h5>load button to bring you back to last state !!! </h5>after you finish to edit all the other linked pages then you can  edit your main page" +
                     " press submit to finish your work and than press the \"your finish site link\" which will take you to your site<br><input type=\"button\" onclick=\"info2()\"  value=\"Next Page\">");
             });
 
@@ -130,15 +130,15 @@
                 document.getElementById("showColor").style.backgroundColor = "blue";
             }
             if (strUser === "green") {
-                $('#tagColor').show();
+                //$('#tagColor').show();
                 document.getElementById("showColor").style.backgroundColor = "green";
             }
             if (strUser === "pink") {
-                $('#tagColor').show();
+               // $('#tagColor').show();
                 document.getElementById("showColor").style.backgroundColor = "pink";
             }
             if (strUser === "purple") {
-                $('#tagColor').show();
+                //$('#tagColor').show();
                 document.getElementById("showColor").style.backgroundColor = "purple";
             }
             $('#save').click();
@@ -156,8 +156,8 @@
                 $('#myModal').modal('hide');
                 var pressedBy = $("#okButton").attr("pressedBy");
                 var linkName = $("#linkNameInput").val();
-                $('#' + parent).html("<a  href=\"\SecondPage\\" + parent + ".html\">" + "<span style='font-size: 8px'>" + linkName + " </span></a>");
-                $('#' + parent).append("<h4> <br>Press the link to edit the page !!!  </h4>");
+                $('#' + parent).html("<a  href=\"\SecondPage\\" + parent + ".html\">" + "<span style='font-size: 18px'>" + linkName + " </span></a>");
+                $('#' + parent).append("<h5> <br>press the link to edit the page</h5>");
                 $('#' + parent + 'Linkid').val(linkName);
                 $('#save').click();
             });
@@ -236,7 +236,7 @@
 
     <hr>
 
-    <div><h3>Press these buttons to load the page or to submit a new page</h3></div>
+    <div><h3>Press these buttons to load the page or to submit a new one</h3></div>
     <div align="center">
         <table id="noBorder2">
             <tr id="trNoBorder3">
@@ -246,10 +246,12 @@
                 <td id="tdNoBorder7">
                     <input type="submit" id="submit" name="submit" value="Submit">
                 </td>
+                <td id="tdNoBorder5">
+                    <input type="button" hidden id="save" value="Save">
+                </td>
             </tr>
         </table>
     </div>
-    <input type="button" hidden id="save" value="Save">
 
     <hr>
     <div style="text-align: center;"><div><h3>Press here to see your finished work!<br></h3></div><a href="1.html"><h2>YOUR FINISHED SITE</h2></a></div>
