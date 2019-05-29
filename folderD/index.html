@@ -27,7 +27,7 @@
                     " to the main page , press on him " +
                     " and it will take you to the other page to be edited,when you done  <h4>press submit and press on \"return to main page\ </h4> which will bring you back to this page." +
                     " after that  press the <h6>load button to bring you back to last state !!! </h6>after you finish to edit all the other linked pages then you can  edit your main page" +
-                    " press submit to finish your work and than press the \"your finish site link\" which will take you to your site   <br><input type=\"button\" onclick=\"info2()\"  value=\"Next Page\">");
+                    " press submit to finish your work and than press the \"your finish site link\" which will take you to your site<br><input type=\"button\" onclick=\"info2()\"  value=\"Next Page\">");
             });
 
 
@@ -130,7 +130,7 @@
                 document.getElementById("showColor").style.backgroundColor = "blue";
             }
             if (strUser === "green") {
-                //$('#tagColor').show();
+                $('#tagColor').show();
                 document.getElementById("showColor").style.backgroundColor = "green";
             }
             if (strUser === "pink") {
@@ -170,7 +170,7 @@
 
         });
 
-        // 29.5.19 /*
+       /*
         $(document).ready(function () {
             $("#SrecNameText").click(function () {
                 var linkName = prompt("Please insert a name to the link", "insert value");
@@ -211,7 +211,7 @@
             });
             $('#save').click();
         });
-        // 29.5.19 */
+      */
     </script>
 </head>
 
@@ -223,47 +223,42 @@
     <!--header file 	-->
     <div style="text-align: center;">
         <table>
-            <tr>
+            <tr align="center">
                 <td>
                     <div style="text-align: center;">
-                        <h3>please select a photo to upload to header </h3>
-                        <h3>(only after you finish to edit the other pages)</h3>
-                        <div id="div1"></div>
-                        <input type="file" name="file" id="file" onchange="addPicture(this)"><br>
+                        <h3>Please select a photo to upload to the header </h3>
+                        <h5>(Only after you've finished editing all other pages)</h5>
+                        <div align="center">
+                            <input align="center" type="file" name="file" id="file" onchange="addPicture(this)"><br>
+                        </div>
                     </div>
                 </td>
             </tr>
         </table>
-
     </div>
 
-    <div style="text-align: center;">
-        <table>
-            <tr id="firstTr">
-                <td name="textA" id="a" align="center"><input class="addPageName" type="button" name="firstNameText"
-                                                              id="FirstNameText" value="press to add a page"><br></td>
-                <td id="b"><input class="addPageName" type="button" name="secondNameText"
-                                  id="SecNameText" value="*press to add a page"> <br></td>
-                <td id="c"><input class="addPageName" type="button" name="thirdNameText"
-                                  id="ThirdNameText" value="press to add a page"> <br></td>
-                <td id="d" align="center"><input class="addPageName" type="button" name="fourNameText" id="FourNameText"
-                                                 value="press to add a page"> <br></td>
-                <td id="e" align="center"><input class="addPageName" type="button" name="fiveNameText" id="FiveNameText"
-                                                 value="press to add a page"> <br></td>
-            </tr>
-        </table>
+    <table>
+        <tr id="firstTr">
+            <td name="textA" id="a"><input class="addPageName" type="button" name="firstNameText" id="FirstNameText" value="press to add a page"><br></td>
+            <td id="b"><input class="addPageName" type="button" name="secondNameText" id="SecNameText" value="press to add a page"><br></td>
+            <td id="c"><input class="addPageName" type="button" name="thirdNameText" id="ThirdNameText" value="press to add a page"><br></td>
+            <td id="d"><input class="addPageName" type="button" name="fourNameText" id="FourNameText" value="press to add a page"><br></td>
+            <td id="e"><input class="addPageName" type="button" name="fiveNameText" id="FiveNameText" value="press to add a page"><br></td>
+        </tr>
+    </table>
 
-        <h2> press this button if you want to delete a cell</h2>
-        <input name="aLink" type="hidden" id="aLinkid" value="2">
-        <input name="bLink" type="hidden" id="bLinkid" value="2">
-        <input name="cLink" type="hidden" id="cLinkid" value="2">
-        <input name="dLink" type="hidden" id="dLinkid" value="2">
-        <input name="eLink" type="hidden" id="eLinkid" value="2">
-        <input id="del1" type="button" value="Delete a cell !!! " onclick="delRow()">
-        <input id="add1" type="button" value="Add a cell !!! " onclick="addRow()">
+    <h2> press this button if you want to delete a cell</h2>
+    <input name="aLink" type="hidden" id="aLinkid" value="2">
+    <input name="bLink" type="hidden" id="bLinkid" value="2">
+    <input name="cLink" type="hidden" id="cLinkid" value="2">
+    <input name="dLink" type="hidden" id="dLinkid" value="2">
+    <input name="eLink" type="hidden" id="eLinkid" value="2">
+    <input id="del1" type="button" class="btn1" value="Delete a Cell" onclick="delRow()">
+    <input id="add1" type="button" class="btn1" value="Add a Cell" onclick="addRow()">
 
 
-        <div><h2> please select the color <br> for the background </h2></div>
+    <div><h2> please select the color <br> for the background </h2></div>
+    <div align="center">
         <label for="selectColor"></label><select id="selectColor" class="target" onchange="change()" name="colorPick">
         <option selected="selected" value="red">red</option>
         <option value="blue">blue</option>
@@ -272,27 +267,18 @@
         <option value="pink">pink</option>
         <option value="purple">purple</option>
     </select>
-
         <div id="tagColor"></div>
-        <div id="showColor" style="width:75px;height:50px;background-color:red"></div>
-        <input type="button" hidden id="save" value="press here to save the page">
-        <input type="button" id="load" value="press here to load the page" disabled>
-
+        <div id="showColor"></div>
     </div>
-    <h3> Press this button when you <br>finish to edit your main page </h3>
+    <input type="button" hidden id="save" value="press here to save the page">
+    <input type="button" id="load" value="press here to load the page" disabled>
 
+    <h3> Press this button when you <br>finish to edit your main page </h3>
     <input type="submit" name="submit" value="Submit">
-    <table>
-        <tr>
-            <td>
-                <div style="text-align: center;"><h3> Press here to see your <br>finish work !!! <a href="1.html">YOUR FINISHED SITE !!!</a>
-                </h3></div>
-            </td>
-        </tr>
-    </table>
+
+    <div style="text-align: center;"><h3><br>Press here to see your finished work!<br><a href="1.html">YOUR FINISHED SITE</a></h3></div>
 
 </form>
-<h1>Nofar Alfasi</h1>
 
 
 <div id="myModal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
