@@ -19,18 +19,6 @@
             $('#CC').hide();
             $('#DD').hide();
             $('#EE').hide();
-            /*
-                $('textarea').each(function(index,item){
-                if($(this).val() != 'insert text'){
-                    ++i;
-                    //$('#BB').css('display','block');
-                    console.log($(this).parent().parent());
-                    $(this).parent().parent().show();
-                }
-                $(this).html($(item).val());
-                console.log($(this));
-                });
-            */
         });
 
         function addPicture(e) {
@@ -38,8 +26,8 @@
             if (fileId === "filebb") {
                 var str = document.getElementById("bFile").value;
                 var res = str.split("\\");
-                //var p = 	document.getElementById('div1');
-                //p.innerHTML="<img src=\"..\\upload\\"+res[2]+"\"  height=\"200\" width=\"200\" >";
+                var p = document.getElementById('div1');
+                p.innerHTML = "<img src=\"..\\upload\\" + res[2] + "\"  height=\"200\" width=\"200\" >";
             }
 
             if (fileId === "filedd") {
