@@ -48,7 +48,7 @@ if ((@$_POST["jjTextarea"] != '' || isset($_FILES["filekk"]["tmp_name"])) && @$_
     @fwrite($fh, '<td align="center">  <img src = "../folderD/upload/' . $_FILES["filekk"]["name"] . '" > </td></tr>');
 }
 fwrite($fh, '</table>');
-fwrite($fh, '<a href="1.html">   Back To Home  </a>');
+fwrite($fh, '<a href="1.html">   Home  </a>');
 
 
 fwrite($fh, '</body></html>');

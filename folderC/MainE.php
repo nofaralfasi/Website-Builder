@@ -24,9 +24,9 @@ if(isset($_FILES["filekk"]["tmp_name"])){
 
 
 $fh= @fopen($filename, 'w') or die("can't open file");
-@fwrite($fh, '<html>  <body bgcolor='.$_POST["colorPick"].'><center>');
-@fwrite($fh, '<center> <header ><img src="../folderD/upload/'.$_FILES["file"]["name"].'" width="70%" height="250px"></header>  </center> ');
-fwrite($fh, '<center> <table  width="70%" border =2 cellpadding="2" >');
+@fwrite($fh, '<html>  <body bgcolor='.$_POST["colorPick"].'>');
+@fwrite($fh, '  <header ><img src="../folderD/upload/'.$_FILES["file"]["name"].'" width="70%" height="250px"></header>    ');
+fwrite($fh, '  <table  width="70%" border =2 cellpadding="2" >');
 
 if(( @$_POST["aaTextarea"] != '' || isset($_FILES["filebb"]["tmp_name"])) && @$_POST["delA"] != "no" ){
 fwrite($fh,'<tr><td align="center" <h4>'.$_POST["aaTextarea"].'</h4></td>');
@@ -48,8 +48,8 @@ if((@$_POST["jjTextarea"] != '' || isset($_FILES["filekk"]["tmp_name"])) && @$_P
 fwrite($fh,'<tr><td align="center" <h4>'.$_POST["aaTextarea"].'</h4></td>');
 @fwrite($fh, '<td align="center">  <img src = "../folderD/upload/'.$_FILES["filekk"]["name"].'" > </td></tr>');
 }
-fwrite($fh, '</table></center>');
-fwrite($fh, '<a href="1.html">   Back To Home  </a>');
+fwrite($fh, '</table>');
+fwrite($fh, '<a href="1.html">  Home  </a>');
 
 
 fwrite($fh, '</body></html>');

@@ -1,22 +1,164 @@
 /* Messi CSS */
 
-body{
-  font-family: 'Roboto', sans-serif;
-  line-height: 28px;
-  font-weight: 300;
-  font-size: 14px;
-  color:#282828;
+/*html {*/
+/*    align-self: center;*/
+/*    horiz-align: center;*/
+/*    align-content: center;*/
+/*    alignment: center;*/
+/*    align-items: center;*/
+/*}*/
+
+body {
+  margin-left: 10%;
+  margin-right: 10%;
+  /*font-family: 'Roboto', sans-serif;*/
+  align-content: center;
+  alignment: center;
+  align-items: center;
+  child-align: middle;
+  text-align: center;
+  align-self: center;
+  color: #282828;
   background-color: #e1faff;
   -webkit-text-size-adjust: 100%;
   -webkit-overflow-scrolling: touch;
   -webkit-font-smoothing: antialiased !important;
 }
 
-body, html{
-  overflow-x:hidden;
+table, th, td, tr {
+  border: 1px solid black;
+  border-collapse: collapse;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+}
+
+#noBorder, #trNoBorder, #tdNoBorder1, #tdNoBorder2, #noBorder2, #trNoBorder3, #tdNoBorder4, #tdNoBorder7 {
+  border: 0;
+  border-collapse: collapse;
+  width: 10%;
+}
+
+#tdNoBorder1, #tdNoBorder2 {
+  width: 10%;
+}
+
+tr:hover {
+  background-color: #bde7ff;
+}
+
+.header {
+  background-color: #cceeff;
+  padding: 20px;
+  text-align: center;
+  font-size: 30px;
+  /*color: white;*/
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  padding: 5px;
+  margin: 2px;
+  text-align: center;
+  align-content: center;
+  alignment: center;
+  align-items: center;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+h2 {
+  font-size: 25px;
+  line-height: 35px;
+  margin: 1px;
+}
+
+h3 {
+  font-size: 21px;
+  line-height: 28px;
+  margin: 7px;
+  padding: 5px;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 7px;
+  padding: 5px;
+}
+
+h5 {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+h6 {
+  font-size: 9px;
+  line-height: 20px;
+}
+
+#save, #load, #div1, #file, #mainHeaderForm, #info1 {
+  align-self: center;
+  text-align: center;
+  font-size: 16px;
+  padding: 5px;
+  margin: 5px;
+  align-content: center;
+  alignment: center;
+}
+
+#del1, #add1 {
+  font-size: 16px;
+  padding: 5px;
+  margin: 5px;
+}
+
+#showColor {
+  width: 100px;
+  height: 50px;
+  background-color: red;
+}
+
+#selectColor {
+  width: 100px;
+  height: 50px;
+  padding-left: 5px;
+}
+
+#submit, #load {
+  padding: 5px;
+  width: 90px;
+  height: 40px;
+}
+
+#a, #b, #c, #d, #e, #file {
+  width: fit-content;
+  text-align: center;
+}
+
+#FiveNameText, #FourNameText, #ThirdNameText, #SecNameText, #FirstNameText {
+  text-align: center;
+}
+
+.btn1, .addPageName {
+  align-self: center;
+  padding: 5px;
+  text-align: center;
+  font-size: 16px;
+  margin: 1px;
+  align-content: center;
+  alignment: center;
+  align-items: center;
 }
 
 .messi-modal {
+  text-align: center;
   position: absolute;
   top: 0;
   left: 0;
@@ -27,33 +169,50 @@ body, html{
   opacity: 0;
 }
 
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 1000px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+    align-content: center;
+    alignment: center;
+    align-items: center;
+  }
+}
+
 .messi {
-  position: absolute;
-  padding: 0;
-  margin: 0;
+  text-align: center;
+  position: center;
+  padding: 10px;
+  margin: 2px;
   font-size: 16px;
   text-shadow: none;
+  align-content: center;
+  alignment: center;
 }
 
 .messi-box {
+  text-align: center;
   position: relative;
   width: 500px;
   height: auto;
   padding: 8px;
   overflow: hidden;
-  background-color: rgba(204, 204, 204, 0.2);
+  background-color: rgba(204, 143, 180, 0.2);
   border-radius: 6px;
   opacity: 1;
   box-shadow: 0 0 1em #444;
 }
 
 .messi-wrapper {
+  text-align: center;
   position: relative;
   background-color: #fff;
   border-radius: 5px;
 }
 
 .messi-titlebox {
+  text-align: center;
   padding: 10px;
   overflow: hidden;
   font: 1.3em bold helvetica, arial;
@@ -66,12 +225,9 @@ body, html{
   background-image: -o-linear-gradient(bottom, #3b3b3b 25%, #575757 75%);
   background-image: -webkit-linear-gradient(bottom, #3b3b3b 25%, #575757 75%);
   background-image: -ms-linear-gradient(bottom, #3b3b3b 25%, #575757 75%);
-  -webkit-border-radius: 5px 5px 0 0px;
-          border-radius: 5px 5px 0 0px;
-  -moz-border-radius-topright: 5px;
-  -moz-border-radius-bottomright: 0;
-  -moz-border-radius-bottomleft: 0;
-  -moz-border-radius-topleft: 5px;
+  -webkit-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
 }
 
 .messi-titlebox.info {
@@ -136,9 +292,9 @@ body, html{
   background-color: #333;
   opacity: 0;
   -webkit-transition: opacity .25s linear, visibility .1s linear .5s;
-     -moz-transition: opacity .25s linear, visibility .1s linear .5s;
-       -o-transition: opacity .25s linear, visibility .1s linear .5s;
-          transition: opacity .25s linear, visibility .1s linear .5s;
+  -moz-transition: opacity .25s linear, visibility .1s linear .5s;
+  -o-transition: opacity .25s linear, visibility .1s linear .5s;
+  transition: opacity .25s linear, visibility .1s linear .5s;
 }
 
 .messi-content:hover .messi-closebtn {
@@ -159,15 +315,13 @@ body, html{
   margin: 0 10px;
   border-top: 1px solid #eee;
   -webkit-box-orient: horizontal;
-     -moz-box-orient: horizontal;
-          box-orient: horizontal;
+  -moz-box-orient: horizontal;
 }
 
 .messi-actions .btnbox {
   text-align: center;
   -webkit-box-flex: 1;
-     -moz-box-flex: 1;
-          box-flex: 1;
+  -moz-box-flex: 1;
 }
 
 .messi-actions .btnbox .btn {
@@ -183,17 +337,17 @@ body, html{
   background-image: -moz-linear-gradient(135deg, rgba(255, 255, 255, 0.05) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 75%, transparent 75%, transparent);
   background-image: -ms-linear-gradient(135deg, rgba(255, 255, 255, 0.05) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 75%, transparent 75%, transparent);
   -webkit-background-size: 40px 40px;
-     -moz-background-size: 40px 40px;
-          background-size: 40px 40px;
+  -moz-background-size: 40px 40px;
+  background-size: 40px 40px;
   -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.4);
-     -moz-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.4);
-          box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.4);
+  -moz-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.4);
   -webkit-animation: animate-bg 5s linear infinite;
-     -moz-animation: animate-bg 5s linear infinite;
+  -moz-animation: animate-bg 5s linear infinite;
 }
 
 .messi-titlebox.anim.info {
-  background-color: #4ea5cd;
+  background-color: #ffdefc;
 }
 
 .messi-titlebox.anim.error {
@@ -229,6 +383,7 @@ body, html{
 /* CSS Buttons from Twitter Bootstrap: http://twitter.github.com/bootstrap/ */
 
 .messi .btn {
+  text-align: center;
   display: inline-block;
   *display: inline;
   padding: 4px 10px 4px;
@@ -256,14 +411,13 @@ body, html{
   border-color: #e6e6e6 #e6e6e6 #bfbfbf;
   border-bottom-color: #b3b3b3;
   -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
-  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
   *zoom: 1;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .messi .btn:hover,
@@ -291,15 +445,13 @@ body, html{
   *background-color: #d9d9d9;
   background-position: 0 -15px;
   -webkit-transition: background-position 0.1s linear;
-     -moz-transition: background-position 0.1s linear;
-      -ms-transition: background-position 0.1s linear;
-       -o-transition: background-position 0.1s linear;
-          transition: background-position 0.1s linear;
+  -moz-transition: background-position 0.1s linear;
+  -o-transition: background-position 0.1s linear;
+  transition: background-position 0.1s linear;
 }
 
 .messi .btn:focus {
   outline: thin dotted #333;
-  outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 
@@ -310,8 +462,8 @@ body, html{
   background-image: none;
   outline: 0;
   -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-     -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-          box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .messi .btn-primary,
@@ -357,7 +509,6 @@ body, html{
   border-color: #0055cc #0055cc #003580;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#0088cc', endColorstr='#0055cc', GradientType=0);
-  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
 }
 
 .messi .btn-primary:hover,
@@ -387,7 +538,6 @@ body, html{
   border-color: #f89406 #f89406 #ad6704;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#fbb450', endColorstr='#f89406', GradientType=0);
-  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
 }
 
 .messi .btn-warning:hover,
@@ -417,7 +567,6 @@ body, html{
   border-color: #bd362f #bd362f #802420;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ee5f5b', endColorstr='#bd362f', GradientType=0);
-  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
 }
 
 .messi .btn-danger:hover,
@@ -447,7 +596,6 @@ body, html{
   border-color: #51a351 #51a351 #387038;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#62c462', endColorstr='#51a351', GradientType=0);
-  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
 }
 
 .messi .btn-success:hover,
@@ -465,7 +613,7 @@ body, html{
 }
 
 .messi .btn-info {
-  background-color: #49afcd;
+  background-color: #ffdefc;
   *background-color: #2f96b4;
   background-image: -ms-linear-gradient(top, #5bc0de, #2f96b4);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#2f96b4));
@@ -477,7 +625,6 @@ body, html{
   border-color: #2f96b4 #2f96b4 #1f6377;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#5bc0de', endColorstr='#2f96b4', GradientType=0);
-  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
 }
 
 .messi .btn-info:hover,
@@ -507,7 +654,6 @@ body, html{
   border-color: #222222 #222222 #000000;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#555555', endColorstr='#222222', GradientType=0);
-  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
 }
 
 .messi .btn-inverse:hover,
@@ -536,6 +682,7 @@ input[type="submit"].messi .btn {
 }
 
 button.messi .btn::-moz-focus-inner {
+  text-align: center;
   padding: 0;
   border: 0;
 }
