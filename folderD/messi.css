@@ -35,7 +35,7 @@ table, th, td, tr {
     padding: 10px;
 }
 
-#noBorder, #trNoBorder, #tdNoBorder1, #tdNoBorder2 {
+#noBorder, #trNoBorder, #tdNoBorder1, #tdNoBorder2, #noBorder2, #trNoBorder3, #tdNoBorder4, #tdNoBorder7 {
     border: 0;
     border-collapse: collapse;
     width: 10%;
@@ -100,6 +100,8 @@ h3 {
 h4 {
     font-size: 18px;
     line-height: 24px;
+    margin: 7px;
+    padding: 5px;
 }
 
 h5 {
