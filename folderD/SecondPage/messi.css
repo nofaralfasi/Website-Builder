@@ -59,7 +59,7 @@
 }
 
 .messi-titlebox.info {
-  background-color: #4ea5cd;
+  background-color: #ffdefc;
   background-image: none;
 }
 
@@ -138,7 +138,7 @@
 .messi-actions {
   display: -webkit-box;
   display: -moz-box;
-  display: box;
+  display: -webkit-box;
   padding-top: 8px;
   margin: 0 10px;
   border-top: 1px solid #eee;

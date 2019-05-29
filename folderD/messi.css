@@ -177,7 +177,7 @@
 }
 
 .messi-titlebox.anim.info {
-  background-color: #4ea5cd;
+  background-color: #ffdefc;
 }
 
 .messi-titlebox.anim.error {
@@ -449,7 +449,7 @@
 }
 
 .messi .btn-info {
-  background-color: #49afcd;
+  background-color: #ffdefc;
   *background-color: #2f96b4;
   background-image: -ms-linear-gradient(top, #5bc0de, #2f96b4);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#2f96b4));
