@@ -1,13 +1,15 @@
 <html id="mainP">
-<title> ShulWix (targil 3) </title>
 <head>
+    <title>SecondPage_a</title>
+    <!--    <title> PHP HW3 TI </title>-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="http://malsup.github.com/jquery.form.js"></script>
     <link href="messi.css" rel="stylesheet">
     <script src="messi.js"></script>
+
     <script>
-
-
         var i = 0;
         $(document).ready(function () {
             //if(localStorage.getItem('dcd') == undefined || localStorage.getItem('dcd') != ""){
@@ -119,7 +121,6 @@
 
 
         function change() {
-
             var e = document.getElementById("selectColor");
             var strUser = e.options[e.selectedIndex].value;
             if (strUser === "black") {

@@ -4,16 +4,16 @@ $filename="../folderD/1.html";
 
    
 	if(!(isset( $_FILES["file"]["tmp_name"]))){
-	echo "you didnt select a photo <br>";
+	echo "You didn't select a photo <br>";
 	}
 
 	
 //move the file from temp dir  to upload
 move_uploaded_file($_FILES["file"]["tmp_name"],"../folderD/upload/". $_FILES["file"]["name"]);
 $temp="My site";
-$text="5 best place I ever visit";
+$text="5 Most Beautiful Places I've Been";
 $fh= @fopen($filename, 'w') or die("can't open file");
-fwrite($fh, '<html>  <body bgcolor='.$_POST["colorPick"].'><center>');
+fwrite($fh, '<html>  <body bgcolor='.$_POST["colorPick"].'>');
 fwrite($fh, '<center>  <header ><img src="../folderD/upload/'.$_FILES["file"]["name"].'" width="70%" height="250px"></header>   </center> ');
 fwrite($fh, '<center> <table  width="70%" border =2 cellpadding="2" > <tr>');
 if( $_POST["aLink"] !="" && $_POST["aLink"] != 2 ){

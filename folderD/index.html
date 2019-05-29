@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title> PHP HW3 TI </title>
+    <title> PHP HW3 TI D_index</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="http://malsup.github.com/jquery.form.js"></script>
-    <link rel="stylesheet" href="messi.css"/>
+    <link href="messi.css" rel="stylesheet">
     <script src="messi.js"></script>
 
     <script>
@@ -22,7 +22,6 @@
         var clinktemp;
         var dlinktemp;
         var elinktemp;
-
 
         $(document).ready(function () {
             $('.modal-backdrop').remove();
@@ -62,62 +61,58 @@
 
         function info2() {
             infoPage.hide();
-            new Messi("<div style="text-align: center;">Thanks !!! <br> matan shulman <br> 300735883 <br><div style="text-align: center;"> ");
+            new Messi("<div style=\"text-align: center\"><br>Thanks!<br>Nofar Alfasi<br></div>\n");
         }
-
 
         function addRow() {
             if (i < 5) {
                 i++;
-                if (i == 2) {
+                if (i === 2) {
                     //$("#firstTr").append(clone2);
-                    $("#b").show()
+                    $("#b").show();
                     $('#bLinkid').val(blinktemp);
                 }
-                if (i == 3) {
+                if (i === 3) {
                     //$("#firstTr").append(clone3);
-                    $("#c").show()
+                    $("#c").show();
                     $('#cLinkid').val(clinktemp);
                 }
-                if (i == 4) {
+                if (i === 4) {
                     //$("#firstTr").append(clone4);
-                    $("#d").show()
+                    $("#d").show();
                     $('#dLinkid').val(dlinktemp);
                 }
-                if (i == 5) {
+                if (i === 5) {
                     //$("#firstTr").append(clone5);
-                    $("#e").show()
+                    $("#e").show();
                     $('#eLinkid').val(elinktemp);
                 }
 
             } else {
-                new Messi("Cant add more pages");
+                new Messi("Cannot add more pages");
             }
             $("#save").click();
         }
 
         function delRow() {
-
             if (i > 1) {
-
-                if (i == 2) {
-
-                    $("#b").hide()
+                if (i === 2) {
+                    $("#b").hide();
                     blinktemp = $('#bLinkid').val();
                     $('#bLinkid').val("");
                 }
-                if (i == 3) {
-                    $("#c").hide()
+                if (i === 3) {
+                    $("#c").hide();
                     clinktemp = $('#cLinkid').val();
                     $('#cLinkid').val("");
                 }
-                if (i == 4) {
-                    $("#d").hide()
+                if (i === 4) {
+                    $("#d").hide();
                     dlinktemp = $('#dLinkid').val();
                     $('#dLinkid').val("");
                 }
-                if (i == 5) {
-                    $("#e").hide()
+                if (i === 5) {
+                    $("#e").hide();
                     elinktemp = $('#eLinkid').val();
                     $('#eLinkid').val("");
                 }
@@ -128,27 +123,32 @@
             $('#save').click();
         }
 
-
         function change() {
-
             var e = document.getElementById("selectColor");
             var strUser = e.options[e.selectedIndex].value;
-            if (strUser == "black") {
+            if (strUser === "black") {
                 //	$('#tagColor').show();
                 document.getElementById("showColor").style.backgroundColor = "black";
             }
-            if (strUser == "red") {
+            if (strUser === "red") {
                 //$('#tagColor').show();
                 document.getElementById("showColor").style.backgroundColor = "red";
             }
-            if (strUser == "blue") {
+            if (strUser === "blue") {
                 //	$('#tagColor').show();
                 document.getElementById("showColor").style.backgroundColor = "blue";
             }
-            if (strUser == "green") {
+            if (strUser === "green") {
                 //$('#tagColor').show();
                 document.getElementById("showColor").style.backgroundColor = "green";
-
+            }
+            if (strUser === "pink") {
+                $('#tagColor').show();
+                document.getElementById("showColor").style.backgroundColor = "pink";
+            }
+            if (strUser === "purple") {
+                $('#tagColor').show();
+                document.getElementById("showColor").style.backgroundColor = "purple";
             }
             $('#save').click();
         }
@@ -156,17 +156,16 @@
         $(document).ready(function () {
             // bind 'mainHeaderForm' and provide a simple callback function
             $('#mainHeaderForm').ajaxForm(function (data) {
-                new Messi('Your page has been saved  !!! ');
+                new Messi('Your page has been saved!');
             });
         });
-
 
         $(document).ready(function () {
             $("#okButton").click(function () {
                 $('#myModal').modal('hide');
                 var pressedBy = $("#okButton").attr("pressedBy");
                 var linkName = $("#linkNameInput").val();
-                $('#' + parent).html("<a  href=\"\SecondPage\\" + parent + ".html\">" + "<font size=\"8\">" + linkName + " <span></a>")
+                $('#' + parent).html("<a  href=\"\SecondPage\\" + parent + ".html\">" + "<span style='font-size: 8px'>" + linkName + " </span></a>");
                 $('#' + parent).append("<h4> <br>Press the link to edit the page !!!  </h4>");
                 $('#' + parent + 'Linkid').val(linkName);
                 $('#save').click();
@@ -179,10 +178,7 @@
             });
 
         });
-
-
         /*
-
                 $(document).ready(function() {
                     $("#SrecNameText").click(function() {
                     var linkName = prompt("Please insert a name to the link","insert value");
@@ -223,19 +219,16 @@
                     });
              $('#save').click();
                 });
-
 */
     </script>
 </head>
 
-<body vlink="blue" style="background-color:CornflowerBlue;">
-
+<body vlink="blue" style="background-color:#e1faff;">
 
 <!--Main Form 	-->
 <form id="mainHeaderForm" action="../folderC/MainPage.php" method="post" enctype="multipart/form-data">
-    <div style="text-align: center;"><h3>this is your main page</h3></div>
-    <div style="text-align: center;"><input type="button" id="info1" value="Press here for  'how to work' "></div>
-    </br>
+    <div style="text-align: center;"><h3>This is your main page</h3></div>
+    <div style="text-align: center;"><input type="button" id="info1" value="Press here for 'how to work'"></div>
     <!--header file 	-->
     <div style="text-align: center;">
         <table align="center" border="1" width="78%">
@@ -252,7 +245,6 @@
         </table>
 
     </div>
-
 
     <div style="text-align: center;">
         <table align="center" width="78%" border=2 cellpadding="2">

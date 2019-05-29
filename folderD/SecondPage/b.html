@@ -1,16 +1,17 @@
 <html id="mainP">
-<title> ShulWix (targil 3) </title>
 <head>
+    <title>SecondPage_b</title>
+<!--    <title> PHP HW3 TI </title>-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="http://malsup.github.com/jquery.form.js"></script>
-    <link rel="stylesheet" href="messi.css"/>
+    <link href="messi.css" rel="stylesheet">
     <script src="messi.js"></script>
+
     <script>
-
-
         var i = 0;
         $(document).ready(function () {
-
             //if(localStorage.getItem('dcd') == undefined || localStorage.getItem('dcd') != ""){
             //$("html").html(localStorage.getItem('dcd'));
             $('#tagColor').hide();
@@ -29,12 +30,8 @@
                                 $(this).html($(item).val());
                                 console.log($(this));
                             });
-
-
                 */
-
         });
-
 
         function addPicture(e) {
             var fileId = e.name;
@@ -129,27 +126,34 @@
 
             var e = document.getElementById("selectColor");
             var strUser = e.options[e.selectedIndex].value;
-            if (strUser == "black") {
+            if (strUser === "black") {
                 $('#tagColor').show();
                 document.getElementById("showColor").style.backgroundColor = "black";
             }
-            if (strUser == "red") {
+            if (strUser === "red") {
                 $('#tagColor').show();
                 document.getElementById("showColor").style.backgroundColor = "red";
             }
-            if (strUser == "blue") {
+            if (strUser === "blue") {
                 $('#tagColor').show();
                 document.getElementById("showColor").style.backgroundColor = "blue";
             }
-            if (strUser == "green") {
+            if (strUser === "green") {
                 $('#tagColor').show();
                 document.getElementById("showColor").style.backgroundColor = "green";
+            }
+            if (strUser === "pink") {
+                $('#tagColor').show();
+                document.getElementById("showColor").style.backgroundColor = "pink";
+            }
+            if (strUser === "purple") {
+                $('#tagColor').show();
+                document.getElementById("showColor").style.backgroundColor = "purple";
             }
         }
 
 
         $(document).ready(function () {
-
             // bind 'mainHeaderForm' and provide a simple callback function
             $('#mainHeaderForm').ajaxForm(function (data) {
                 new Messi('Your page has been saved  !!! ');
