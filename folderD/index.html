@@ -1,6 +1,7 @@
-<html manifest="demo_html.appcache">
-<title> ShulWix (targil 3) </title>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <title> PHP HW3 TI </title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
@@ -31,11 +32,11 @@
                 $('#load').removeAttr('disabled');
             }
             $('#info1').click(function () {
-                infoPage = new Messi("<center>First thing First:<center> <br> Please edit the other pages <font size=\"3\" color=\"red\"> before you edit the main page !!!</font>  by click on \"press to add a page\"" +
+                infoPage = new Messi("<div style="text-align: center;">First thing First:<div style="text-align: center;"> <br> Please edit the other pages <h5> before you edit the main page !!!</h5>  by click on \"press to add a page\"" +
                     " and than a pop up will be pop. and you will  have to enter a name,press the ok button  and a link will be added" +
                     " to the main page , press on him " +
-                    " and it will take you to the other page to be edited,when you done  <font size=\"3\" color=\"red\">press submit and press on \"return to main page\ </font> which will bring you back to this page." +
-                    " after that  press the <font size=\"3\" color=\"red\">load button to bring you back to last state !!! </font>after you finish to edit all the other linked pages then you can  edit your main page" +
+                    " and it will take you to the other page to be edited,when you done  <h4>press submit and press on \"return to main page\ </h4> which will bring you back to this page." +
+                    " after that  press the <h6>load button to bring you back to last state !!! </h6>after you finish to edit all the other linked pages then you can  edit your main page" +
                     " press submit to finish your work and than press the \"your finish site link\" which will take you to your site   <br><input type=\"button\" onclick=\"info2()\"  value=\"Next Page\">");
             });
 
@@ -61,7 +62,7 @@
 
         function info2() {
             infoPage.hide();
-            new Messi("<center>Thanks !!! <br> matan shulman <br> 300735883 <br><center> ");
+            new Messi("<div style="text-align: center;">Thanks !!! <br> matan shulman <br> 300735883 <br><div style="text-align: center;"> ");
         }
 
 
@@ -165,7 +166,7 @@
                 $('#myModal').modal('hide');
                 var pressedBy = $("#okButton").attr("pressedBy");
                 var linkName = $("#linkNameInput").val();
-                $('#' + parent).html("<a  href=\"\SecondPage\\" + parent + ".html\">" + "<font size=\"8\">" + linkName + " <font></a>")
+                $('#' + parent).html("<a  href=\"\SecondPage\\" + parent + ".html\">" + "<font size=\"8\">" + linkName + " <span></a>")
                 $('#' + parent).append("<h4> <br>Press the link to edit the page !!!  </h4>");
                 $('#' + parent + 'Linkid').val(linkName);
                 $('#save').click();
@@ -232,29 +233,29 @@
 
 <!--Main Form 	-->
 <form id="mainHeaderForm" action="../folderC/MainPage.php" method="post" enctype="multipart/form-data">
-    <center><h3>this is your main page</h3></center>
-    <center><input type="button" id="info1" value="Press here for  'how to work' "></center>
+    <div style="text-align: center;"><h3>this is your main page</h3></div>
+    <div style="text-align: center;"><input type="button" id="info1" value="Press here for  'how to work' "></div>
     </br>
     <!--header file 	-->
-    <center>
-        <table border="1" width="78%">
+    <div style="text-align: center;">
+        <table align="center" border="1" width="78%">
             <tr>
                 <td>
-                    <center>
+                    <div style="text-align: center;">
                         <h3>please select a photo to upload to header </h3>
                         <h3>(only after you finish to edit the other pages)</h3>
                         <div id="div1"></div>
                         <input type="file" name="file" id="file" onchange="addPicture(this)"><br>
-                    </center>
+                    </div>
                 </td>
             </tr>
         </table>
 
-    </center>
+    </div>
 
 
-    <center>
-        <table width="78%" border=2 cellpadding="2">
+    <div style="text-align: center;">
+        <table align="center" width="78%" border=2 cellpadding="2">
             <tr id="firstTr">
                 <td name="textA" id="a" align="center"><input class="addPageName" type="button" name="firstNameText"
                                                               id="FirstNameText" value="press to add  a page"> <br></td>
@@ -277,32 +278,30 @@
         <input name="eLink" type="hidden" id="eLinkid" value="2">
         <input id="del1" type="button" value="Delete a cell !!! " onclick="delRow()">
         <input id="add1" type="button" value="Add a cell !!! " onclick="addRow()">
-        </br></br></br>
 
 
-        <div><h2> please select the color </br> for the background </h2></div>
+        <div><h2> please select the color <br> for the background </h2></div>
         <select id="selectColor" class="target" d onchange="change()" name="colorPick">
             <option selected="selected" value="red"> red</option>
             <option value="blue"> blue</option>
             <option value="black"> black</option>
             <option value="green"> green</option>
         </select>
-        </br></br>
 
         <div id="tagColor"></div>
         <div id="showColor" style="width:75px;height:50px;background-color:red"></div>
         <input type="button" hidden id="save" value="press here to save the page">
         <input type="button" id="load" value="press here to load the page" disabled>
 
-    </center>
+    </div>
     <h3> Press this button when you <br>finish to edit your main page </h3>
 
     <input type="submit" name="submit" value="Submit">
-    <table border="2">
+    <table align="center" border="2">
         <tr>
             <td>
-                <center><h3> Press here to see your <br>finish work !!! <a href="1.html"></br> YOUR FINISH SITE !!!</a>
-                </h3></center>
+                <div style="text-align: center;"><h3> Press here to see your <br>finish work !!! <a href="1.html">YOUR FINISH SITE !!!</a>
+                </h3></div>
             </td>
         </tr>
     </table>

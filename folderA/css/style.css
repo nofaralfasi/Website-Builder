@@ -1,32 +1,10 @@
-/*
-====================================
-------------------------------------
-    1. General
-    2. Typography
-    3. Home
-    4. Navigation
-    5. About
-    7. Resume
-    8. Skill
-    9. Chart
-    10. Work
-    11. Facts
-    12. Blog
-    13. Hire
-    14. Contact
-    15. Footer
--------------------------------------
-=====================================
-*/
-
-
 body{
     font-family: 'Roboto', sans-serif;
     line-height: 28px;
     font-weight: 300;
     font-size: 14px;
     color:#282828;
-    background-color: #fff;
+    background-color: #ffffff;
     -webkit-text-size-adjust: 100%;
     -webkit-overflow-scrolling: touch;
     -webkit-font-smoothing: antialiased !important;
@@ -94,7 +72,7 @@ a,
 
 h1, h2, h3, h4, h5, h6{
     font-weight: 700;
-    margin:0;
+    margin:15px;
     text-transform: uppercase;
 }
 
@@ -270,7 +248,7 @@ ul.list-check li{
 }
 ul.list-check li::before {
     content: "\f00c";
-    font-family: fontawesome;
+    font-family: fontawesome, serif;
     color: #9029d4;
     margin-right: 10px;
 }
@@ -316,7 +294,7 @@ ul.list-check li::before {
 
 
 #home {
-    background: url(../images/home2.jpg) no-repeat center center;
+    background: url(../images/bg4.jpg) no-repeat center center;
     -webkit-background-attachment: fixed;
     background-attachment: fixed;
     background-color: #222;
@@ -1290,7 +1268,7 @@ Resume Timeline
     opacity: 0.8;
     -webkit-transition: all 0.5s linear;
     -moz-transition: all 0.5s linear;
-    -ms-transition: all 0.5s linear;
+    /*-ms-transition: all 0.5s linear;*/
     -o-transition: all 0.5s linear;
     transition: all 0.5s linear;
 }
@@ -1376,7 +1354,7 @@ Icon for all respective meta
 .the-time::before,
 .the-share::before,
 .the-comments::before{
-    font-family: FontAwesome;
+    font-family: FontAwesome, serif ;
     position: absolute;
     left: 0;
 }
