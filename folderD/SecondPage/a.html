@@ -78,12 +78,10 @@
             } else {
                 new Messi("Cant add more");
             }
-
         }
 
         function delRow() {
             if (i > 1) {
-
                 if (i === 2) {
                     $("#BB").hide();
                     $("#delb").val("no");
@@ -104,9 +102,7 @@
             } else {
                 new Messi("Cant delete last one");
             }
-
         }
-
 
         function change() {
             var e = document.getElementById("selectColor");
@@ -146,76 +142,80 @@
 
         $(document).ready(function () {
             $("#aaText").click(function () {
-                $("#aa").html("<textarea name=\"aaTextarea\" required>insert text</textarea>")
+                $("#aaa").html("<textarea name=\"aaTextarea\" required>insert text</textarea>")
             });
         });
         $(document).ready(function () {
             $("#ccText").click(function () {
-                $("#cc").html("<textarea id=\"btextarea\" name=\"bbTextarea\" required>insert text</textarea>")
+                $("#ccc").html("<textarea id=\"btextarea\" name=\"bbTextarea\" required>insert text</textarea>")
             });
         });
         $(document).ready(function () {
             $("#eeText").click(function () {
-                $("#ee").html("<textarea name=\"eeTextarea\" required></textarea>")
+                $("#eee").html("<textarea name=\"eeTextarea\" required></textarea>")
             });
         });
         $(document).ready(function () {
             $("#ggText").click(function () {
-                $("#gg").html("<textarea name=\"ggTextarea\" required></textarea>")
+                $("#ggg").html("<textarea name=\"ggTextarea\" required></textarea>")
             });
         });
         $(document).ready(function () {
             $("#jjText").click(function () {
-                $("#jj").html("<textarea name=\"jjTextarea\" required></textarea>")
+                $("#jjj").html("<textarea name=\"jjTextarea\" required></textarea>")
             });
         });
 
-
     </script>
-
 </head>
 
 <body vlink="#00008b" bgcolor="#f0f8ff">
 <!--Main Form 	-->
 <form id="mainHeaderForm" action="../../folderC/MainA.php" method="post" enctype="multipart/form-data">
-    <h1>This is a new page (S.P_a)</h1>
+    <div style="text-align: center;"><h2>This is a new page</h2></div>
     <!--header file 	-->
-    <table align="center" border="1" width="78%">
-        <tr>
-            <td align="center">
-                <h1>Please select a photo to upload to header</h1>
-                <input type="file" name="file" id="file"><br>
-            </td>
-        </tr>
-    </table>
+    <div style="text-align: center;">
+        <table>
+            <tr align="center">
+                <td>
+                    <div style="text-align: center">
+                        <h3>Please select a photo to upload to the header </h3>
+                        <div align="center" style="padding-left: 100px"><br>
+                            <input align="middle" type="file" name="file" id="file" style="text-align: center"><br>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
 
     <table align="center" width="78%" border=2 cellpadding="2">
         <tr id="AA">
-            <td id="aaa" align="center"><input type="button" id="aaText" value="press to add  a text"> <br></td>
+            <td id="aaa" align="center"><input type="button" id="aaText" value="press to add text"> <br></td>
             <td id="bbb" align="center">
                 <div id="div1"></div>
                 <input id="bFile" type="file" name="filebb" onchange="addPicture(this)"><br><br></td>
         </tr>
         <tr id="BB">
-            <td id="ccc" align="center"><input type="button" id="ccText" value="press to add  a text"> <br></td>
+            <td id="ccc" align="center"><input type="button" id="ccText" value="press to add text"> <br></td>
             <td id="ddd" align="center">
                 <div id="div2"></div>
                 <input id="dFile" type="file" name="filedd" onchange="addPicture(this)"> <br></td>
         </tr>
         <tr id="CC">
-            <td id="eee" align="center"><input type="button" id="eeText" value="press to add  a text"> <br></td>
+            <td id="eee" align="center"><input type="button" id="eeText" value="press to add text"> <br></td>
             <td id="fff" align="center">
                 <div id="div3"></div>
                 <input id="fFile" type="file" name="fileff" onchange="addPicture(this)"> <br></td>
         </tr>
         <tr id="DD">
-            <td id="ggg" align="center"><input type="button" id="ggText" value="press to add  a text"> <br></td>
+            <td id="ggg" align="center"><input type="button" id="ggText" value="press to add text"> <br></td>
             <td id="hhh" align="center">
                 <div id="div4"></div>
                 <input id="hFile" type="file" name="filehh" onchange="addPicture(this)"> <br></td>
         </tr>
         <tr id="EE">
-            <td id="jjj" align="center"><input type="button" id="jjText" value="press to add  a text"> <br></td>
+            <td id="jjj" align="center"><input type="button" id="jjText" value="press to add text"> <br></td>
             <td id="kkk" align="center">
                 <div id="div5"></div>
                 <input id="kFile" type="file" name="filekk" onchange="addPicture(this)"> <br></td>
@@ -223,25 +223,35 @@
     </table>
 
 
-    <h2> press this button if you want to delete a cell</h2>
+    <h3><br>Press these buttons if you want to delete or to add a cell</h3>
     <input name="aLink" type="hidden" id="aLinkid" value="2">
-    <input type="button" value="Delete a cell !!! " onclick="delRow()">
-    <input type="button" value="Add a cell !!! " onclick="addRow()">
+    <input type="button" id="del1" class="btn1" value="Delete a Cell" onclick="delRow()">
+    <input type="button" id="add1" class="btn1" value="Add a Cell" onclick="addRow()">
 
-    <div><h2>Please select the color <br> for the background </h2></div>
-    <select id="selectColor" class="target" onchange="change()" name="colorPick">
-        <option value="red">red</option>
-        <option value="blue">blue</option>
-        <option value="black">black</option>
-        <option value="green">green</option>
-        <option value="pink">pink</option>
-        <option value="pink">purple</option>
-    </select>
+    <hr>
+
+    <div><h3>Please select the color for the background</h3></div>
+    <div align="center">
+        <table id="noBorder">
+            <tr id="trNoBorder">
+                <td id="tdNoBorder1"><label for="selectColor"></label><select id="selectColor" class="target" onchange="change()" name="colorPick">
+                    <option selected="selected" value="purple">purple</option>
+                    <option value="blue">blue</option>
+                    <option value="black">black</option>
+                    <option value="green">green</option>
+                    <option value="pink">pink</option>
+                    <option value="red">red</option>
+                </select></td>
+                <td id="tdNoBorder2">
+                    <div id="showColor"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
 
     <div>
-        <div id="tagColor">This will be the color of the background</div>
-        <div id="showColor" style="width:75px;height:50px"></div>
-
+        <div align="center" id="tagColor">This will be the color of the background<br></div>
+<hr>
         <input type="button" id="save" value="Press here to save ">
         <input type="button" id="load" value="Press here to load ">
 
@@ -250,14 +260,11 @@
         <input name="delD" type="hidden" id="deld" value="no">
         <input name="delE" type="hidden" id="dele" value="no">
 
-        <h3><br>Please remember to submit your work before moving to other page!!!<br></h3>
+        <h3><br>Remember to submit your work before moving from this page!<br></h3>
         <input type="submit" name="submit" value="Submit"><br>
-        <a href="../index.html"><span style="font-size: large; color: #002ab4; "><br>Press here to go to home button!!!<br></span></a>
+        <a href="../index.html"><span style="font-size: large; color: #002ab4; "><br>Press here to go to back<br></span></a>
     </div>
 </form>
-
-<h1>Nofar Alfasi</h1>
-
 </body>
 </html>
 
