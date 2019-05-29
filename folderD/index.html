@@ -10,18 +10,9 @@
     <script src="messi.js"></script>
 
     <script>
-        var clone1;
-        var clone2;
-        var clone3;
-        var clone4;
-        var clone5;
+        var clone1, clone2, clone3, clone4, clone5;
         var i = 5;
-        var parent;
-        var infoPage;
-        var blinktemp;
-        var clinktemp;
-        var dlinktemp;
-        var elinktemp;
+        var parent, infoPage, blinktemp, clinktemp, dlinktemp, elinktemp;
 
         $(document).ready(function () {
             $('.modal-backdrop').remove();
@@ -31,7 +22,7 @@
                 $('#load').removeAttr('disabled');
             }
             $('#info1').click(function () {
-                infoPage = new Messi("<div style="text-align: center;">First thing First:<div style="text-align: center;"> <br> Please edit the other pages <h5> before you edit the main page !!!</h5>  by click on \"press to add a page\"" +
+                infoPage = new Messi("<div style=\"text-align: center;\">First thing First:<div style=\"text-align: center;\"> <br> Please edit the other pages <h5> before you edit the main page !!!</h5>  by click on \"press to add a page\"" +
                     " and than a pop up will be pop. and you will  have to enter a name,press the ok button  and a link will be added" +
                     " to the main page , press on him " +
                     " and it will take you to the other page to be edited,when you done  <h4>press submit and press on \"return to main page\ </h4> which will bring you back to this page." +
@@ -53,7 +44,7 @@
             $('#load').click(function () {
                 $("html").html(localStorage.getItem('mainpage'));
                 $("form").wrap('<body></body>');
-                $("body").css('background', 'CornflowerBlue');
+                $("body").css('background', 'f0f8ff');
                 $("#selectColor").val(document.getElementById("showColor").style.backgroundColor);
                 i = localStorage.getItem('i');
             });
@@ -178,60 +169,60 @@
             });
 
         });
-        /*
-                $(document).ready(function() {
-                    $("#SrecNameText").click(function() {
-                    var linkName = prompt("Please insert a name to the link","insert value");
-                    alert(linkName);
-                    $("#b").html("<a href=\"\SecondPage\\b.html\">"+"<font size=\"8\">"+linkName+" <font></a>");
-                     $("#b").append("<h4> <br>Press the link to edit the page !!!  </h4>");
-                     $('#bLinkid').val(linkName);
-                    });
-             $('#save').click();
-                });
-                $(document).ready(function() {
-                    $("#ThirdNameText").click(function() {
-                    var linkName = prompt("Please insert a name to the link","insert value");
-                    alert(linkName);
-                    $("#c").html("<a href=\"\SecondPage\\c.html\">"+"<font size=\"8\">"+linkName+" <font></a>");
-                     $("#c").append("<h4> <br>Press the link to edit the page !!!  </h4>");
-                     $('#cLinkid').val(linkName);
-                    });
-             $('#save').click();
-                });
-                $(document).ready(function() {
-                    $("#FourNameText").click(function() {
-                    var linkName = prompt("Please insert a name to the link","insert value");
-                    alert(linkName);
-                    $("#d").html("<a href=\"\SecondPage\\d.html\">"+"<font  size=\"8\">"+linkName+" <font></a>");
-                    $("#d").append("<h4> <br>Press the link to edit the page !!!  </h4>");
-                    $('#dLinkid').val(linkName);
-                    });
-             $('#save').click();
-                });
-                $(document).ready(function() {
-                    $("#FiveNameText").click(function() {
-                    var linkName = prompt("Please insert a name to the link","insert value");
-                    alert(linkName);
-                    $("#e").html("<a href=\"\SecondPage\\e.html\">"+"<font size=\"8\">"+linkName+" <font></a>");
-                    $("#e").append("<h4> <br>Press the link to edit the page !!!  </h4>");
-                     $('#eLinkid').val(linkName);
-                    });
-             $('#save').click();
-                });
-*/
+
+        // 29.5.19 /*
+        $(document).ready(function () {
+            $("#SrecNameText").click(function () {
+                var linkName = prompt("Please insert a name to the link", "insert value");
+                alert(linkName);
+                $("#b").html("<a href=\"\SecondPage\\b.html\">" + "<h4>" + linkName + " <h4></a>");
+                $("#b").append("<h4> <br>Press the link to edit the page !!!  </h4>");
+                $('#bLinkid').val(linkName);
+            });
+            $('#save').click();
+        });
+        $(document).ready(function () {
+            $("#ThirdNameText").click(function () {
+                var linkName = prompt("Please insert a name to the link", "insert value");
+                alert(linkName);
+                $("#c").html("<a href=\"\SecondPage\\c.html\">" + "<h4>" + linkName + " <h4></a>");
+                $("#c").append("<h4> <br>Press the link to edit the page !!!  </h4>");
+                $('#cLinkid').val(linkName);
+            });
+            $('#save').click();
+        });
+        $(document).ready(function () {
+            $("#FourNameText").click(function () {
+                var linkName = prompt("Please insert a name to the link", "insert value");
+                alert(linkName);
+                $("#d").html("<a href=\"\SecondPage\\d.html\">" + "<h4>" + linkName + " <h4></a>");
+                $("#d").append("<h4> <br>Press the link to edit the page !!!  </h4>");
+                $('#dLinkid').val(linkName);
+            });
+            $('#save').click();
+        });
+        $(document).ready(function () {
+            $("#FiveNameText").click(function () {
+                var linkName = prompt("Please insert a name to the link", "insert value");
+                alert(linkName);
+                $("#e").html("<a href=\"\SecondPage\\e.html\">" + "<h6>" + linkName + " </h6></a>");
+                $("#e").append("<h4><br>Press the link to edit the page!!!</h4>");
+                $('#eLinkid').val(linkName);
+            });
+            $('#save').click();
+        });
+        // 29.5.19 */
     </script>
 </head>
 
 <body vlink="blue" style="background-color:#e1faff;">
-
 <!--Main Form 	-->
 <form id="mainHeaderForm" action="../folderC/MainPage.php" method="post" enctype="multipart/form-data">
     <div style="text-align: center;"><h3>This is your main page</h3></div>
     <div style="text-align: center;"><input type="button" id="info1" value="Press here for 'how to work'"></div>
     <!--header file 	-->
     <div style="text-align: center;">
-        <table align="center" border="1" width="78%">
+        <table>
             <tr>
                 <td>
                     <div style="text-align: center;">
@@ -247,18 +238,18 @@
     </div>
 
     <div style="text-align: center;">
-        <table align="center" width="78%" border=2 cellpadding="2">
+        <table>
             <tr id="firstTr">
                 <td name="textA" id="a" align="center"><input class="addPageName" type="button" name="firstNameText"
-                                                              id="FirstNameText" value="press to add  a page"> <br></td>
-                <td id="b" align="center"><input class="addPageName" type="button" name="secondNameText"
-                                                 id="SecNameText" value="press to add  a page"> <br></td>
-                <td id="c" align="center"><input class="addPageName" type="button" name="thirdNameText"
-                                                 id="ThirdNameText" value="press to add  a page"> <br></td>
+                                                              id="FirstNameText" value="press to add a page"><br></td>
+                <td id="b"><input class="addPageName" type="button" name="secondNameText"
+                                  id="SecNameText" value="*press to add a page"> <br></td>
+                <td id="c"><input class="addPageName" type="button" name="thirdNameText"
+                                  id="ThirdNameText" value="press to add a page"> <br></td>
                 <td id="d" align="center"><input class="addPageName" type="button" name="fourNameText" id="FourNameText"
-                                                 value="press to add  a page"> <br></td>
+                                                 value="press to add a page"> <br></td>
                 <td id="e" align="center"><input class="addPageName" type="button" name="fiveNameText" id="FiveNameText"
-                                                 value="press to add  a page"> <br></td>
+                                                 value="press to add a page"> <br></td>
             </tr>
         </table>
 
@@ -273,12 +264,14 @@
 
 
         <div><h2> please select the color <br> for the background </h2></div>
-        <select id="selectColor" class="target" d onchange="change()" name="colorPick">
-            <option selected="selected" value="red"> red</option>
-            <option value="blue"> blue</option>
-            <option value="black"> black</option>
-            <option value="green"> green</option>
-        </select>
+        <label for="selectColor"></label><select id="selectColor" class="target" onchange="change()" name="colorPick">
+        <option selected="selected" value="red">red</option>
+        <option value="blue">blue</option>
+        <option value="black">black</option>
+        <option value="green">green</option>
+        <option value="pink">pink</option>
+        <option value="purple">purple</option>
+    </select>
 
         <div id="tagColor"></div>
         <div id="showColor" style="width:75px;height:50px;background-color:red"></div>
@@ -289,10 +282,10 @@
     <h3> Press this button when you <br>finish to edit your main page </h3>
 
     <input type="submit" name="submit" value="Submit">
-    <table align="center" border="2">
+    <table>
         <tr>
             <td>
-                <div style="text-align: center;"><h3> Press here to see your <br>finish work !!! <a href="1.html">YOUR FINISH SITE !!!</a>
+                <div style="text-align: center;"><h3> Press here to see your <br>finish work !!! <a href="1.html">YOUR FINISHED SITE !!!</a>
                 </h3></div>
             </td>
         </tr>
@@ -313,7 +306,7 @@
             </div>
             <div class="modal-body">
                 <div class="container-fluid">
-                    <input class="form-control" id="linkNameInput" type="text" placeholder="Link name"/>
+                    <label for="linkNameInput"></label><input class="form-control" id="linkNameInput" type="text" placeholder="Link name"/>
                 </div>
             </div>
             <div class="modal-footer">
