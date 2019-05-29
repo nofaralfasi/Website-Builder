@@ -169,67 +169,25 @@
             });
 
         });
-
-       /*
-        $(document).ready(function () {
-            $("#SrecNameText").click(function () {
-                var linkName = prompt("Please insert a name to the link", "insert value");
-                alert(linkName);
-                $("#b").html("<a href=\"\SecondPage\\b.html\">" + "<h4>" + linkName + " <h4></a>");
-                $("#b").append("<h4> <br>Press the link to edit the page !!!  </h4>");
-                $('#bLinkid').val(linkName);
-            });
-            $('#save').click();
-        });
-        $(document).ready(function () {
-            $("#ThirdNameText").click(function () {
-                var linkName = prompt("Please insert a name to the link", "insert value");
-                alert(linkName);
-                $("#c").html("<a href=\"\SecondPage\\c.html\">" + "<h4>" + linkName + " <h4></a>");
-                $("#c").append("<h4> <br>Press the link to edit the page !!!  </h4>");
-                $('#cLinkid').val(linkName);
-            });
-            $('#save').click();
-        });
-        $(document).ready(function () {
-            $("#FourNameText").click(function () {
-                var linkName = prompt("Please insert a name to the link", "insert value");
-                alert(linkName);
-                $("#d").html("<a href=\"\SecondPage\\d.html\">" + "<h4>" + linkName + " <h4></a>");
-                $("#d").append("<h4> <br>Press the link to edit the page !!!  </h4>");
-                $('#dLinkid').val(linkName);
-            });
-            $('#save').click();
-        });
-        $(document).ready(function () {
-            $("#FiveNameText").click(function () {
-                var linkName = prompt("Please insert a name to the link", "insert value");
-                alert(linkName);
-                $("#e").html("<a href=\"\SecondPage\\e.html\">" + "<h6>" + linkName + " </h6></a>");
-                $("#e").append("<h4><br>Press the link to edit the page!!!</h4>");
-                $('#eLinkid').val(linkName);
-            });
-            $('#save').click();
-        });
-      */
     </script>
 </head>
 
 <body vlink="blue" style="background-color:#e1faff;">
 <!--Main Form 	-->
 <form id="mainHeaderForm" action="../folderC/MainPage.php" method="post" enctype="multipart/form-data">
-    <div style="text-align: center;"><h3>This is your main page</h3></div>
-    <div style="text-align: center;"><input type="button" id="info1" value="Press here for 'how to work'"></div>
+    <div style="text-align: center;"><h2>This is your main page</h2></div>
+    <div style="text-align: center;"><input type="button" id="info1" value="Press here for instructions"></div>
+    <br>
     <!--header file 	-->
     <div style="text-align: center;">
         <table>
             <tr align="center">
                 <td>
-                    <div style="text-align: center;">
+                    <div style="text-align: center">
                         <h3>Please select a photo to upload to the header </h3>
-                        <h5>(Only after you've finished editing all other pages)</h5>
-                        <div align="center">
-                            <input align="center" type="file" name="file" id="file" onchange="addPicture(this)"><br>
+                        <h5>(Only after you've finished editing all other pages)<br></h5>
+                        <div align="center" style="padding-left: 100px"><br>
+                            <input align="middle" type="file" name="file" id="file" style="text-align: center" onchange="addPicture(this)"><br>
                         </div>
                     </div>
                 </td>
@@ -247,7 +205,7 @@
         </tr>
     </table>
 
-    <h2> press this button if you want to delete a cell</h2>
+    <h4><br>Press these buttons if you want to delete or to add a cell</h4>
     <input name="aLink" type="hidden" id="aLinkid" value="2">
     <input name="bLink" type="hidden" id="bLinkid" value="2">
     <input name="cLink" type="hidden" id="cLinkid" value="2">
@@ -256,27 +214,42 @@
     <input id="del1" type="button" class="btn1" value="Delete a Cell" onclick="delRow()">
     <input id="add1" type="button" class="btn1" value="Add a Cell" onclick="addRow()">
 
-
-    <div><h2> please select the color <br> for the background </h2></div>
+    <hr>
+    <div><h3>Please select the color for the background</h3></div>
     <div align="center">
-        <label for="selectColor"></label><select id="selectColor" class="target" onchange="change()" name="colorPick">
-        <option selected="selected" value="red">red</option>
-        <option value="blue">blue</option>
-        <option value="black">black</option>
-        <option value="green">green</option>
-        <option value="pink">pink</option>
-        <option value="purple">purple</option>
-    </select>
-        <div id="tagColor"></div>
-        <div id="showColor"></div>
+        <table id="noBorder">
+            <tr id="trNoBorder">
+                <td id="tdNoBorder1"><label for="selectColor"></label><select id="selectColor" class="target" onchange="change()" name="colorPick">
+                    <option selected="selected" value="red">red</option>
+                    <option value="blue">blue</option>
+                    <option value="black">black</option>
+                    <option value="green">green</option>
+                    <option value="pink">pink</option>
+                    <option value="purple">purple</option>
+                </select></td>
+                <td id="tdNoBorder2">
+                    <div id="showColor"></div>
+                </td>
+                <!--        <div id="tagColor"></div>-->
+            </tr>
+        </table>
     </div>
-    <input type="button" hidden id="save" value="press here to save the page">
-    <input type="button" id="load" value="press here to load the page" disabled>
 
-    <h3> Press this button when you <br>finish to edit your main page </h3>
-    <input type="submit" name="submit" value="Submit">
+    <hr>
 
-    <div style="text-align: center;"><h3><br>Press here to see your finished work!<br><a href="1.html">YOUR FINISHED SITE</a></h3></div>
+    <div><h3>Press this button to load your page</h3></div>
+    <input type="button" id="load" value="Load" disabled>
+
+    <hr>
+
+    <div><h3>Press this button when main page is finished</h3></div>
+    <input type="submit" id="submit" name="submit" value="Submit">
+
+    <input type="button" hidden id="save" value="Save">
+
+    <hr>
+
+    <div style="text-align: center;"><h3>Press here to see your finished work!<br><a href="1.html">YOUR FINISHED SITE</a></h3></div>
 
 </form>
 
