@@ -4,7 +4,6 @@ $filename="../folderD/c.html";
 if(isset($_FILES["file"]["tmp_name"])){
 @move_uploaded_file($_FILES["file"]["tmp_name"],"../folderD/upload/". $_FILES["file"]["name"]);
 }
-
 if(isset($_FILES["filebb"]["tmp_name"])){
 @move_uploaded_file($_FILES["filebb"]["tmp_name"],"../folderD/upload/". $_FILES["file"]["name"]);
 }
@@ -21,12 +20,10 @@ if(isset($_FILES["filekk"]["tmp_name"])){
 @move_uploaded_file($_FILES["filekk"]["tmp_name"],"../folderD/upload/". $_FILES["file"]["name"]);
 }
 
-
-
 $fh= @fopen($filename, 'w') or die("can't open file");
 @fwrite($fh, '<html>  <body bgcolor='.$_POST["colorPick"].'>');
-@fwrite($fh, ' <header ><img src="../folderD/upload/'.$_FILES["file"]["name"].'" width="70%" height="250px"></header>   ');
-fwrite($fh, ' <table  width="70%" border =2 cellpadding="2" >');
+@fwrite($fh, ' <header ><img src="../folderD/upload/'.$_FILES["file"]["name"].'" width="90%" height="300px"></header>   ');
+fwrite($fh, ' <table  width="80%" border =2 cellpadding="2" >');
 
 if(( @$_POST["aaTextarea"] != '' || isset($_FILES["filebb"]["tmp_name"])) && @$_POST["delA"] != "no" ){
 fwrite($fh,'<tr><td align="center" <h4>'.$_POST["aaTextarea"].'</h4></td>');
