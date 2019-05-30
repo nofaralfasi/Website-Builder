@@ -23,7 +23,7 @@ if (isset($_FILES["filekk"]["tmp_name"])) {
 $fh = @fopen($filename, 'w') or die("can't open file");
 @fwrite($fh, '<html lang="en"> <head><title>' . $_FILES["file"]["name"] . '</title><link href="style.css" rel="stylesheet"></head>');
 @fwrite($fh, '<body><script>$("body").css("background-color", "' . $_POST["colorPick"] . '");</script>');
-@fwrite($fh, '<center><header><img class="main" src="../folderD/upload/' . $_FILES["file"]["name"] . '" "></header></center> ');
+@fwrite($fh, '<center><header><img class="main" src="../folderD/upload/' . $_FILES["file"]["name"] . '"></header></center> ');
 
 fwrite($fh, '<center><table>');
 if ((@$_POST["aaTextarea"] != '' || isset($_FILES["filebb"]["tmp_name"])) && @$_POST["delA"] != "no") {
