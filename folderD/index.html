@@ -174,22 +174,24 @@
     </script>
 </head>
 
-<body vlink="blue" style="background-color:#e1faff;">
+<body>
 <!--Main Form 	-->
 <form id="mainHeaderForm" action="../folderC/MainPage.php" method="post" enctype="multipart/form-data">
-    <div style="text-align: center;"><h2>This is your main page</h2></div>
-    <div style="text-align: center;"><input type="button" id="info1" value="Press here for instructions"></div>
+    <div><h2>This is your main page</h2></div>
     <br>
-    <!--header file 	-->
-    <div style="text-align: center;">
+    <div><input type="button" id="info1" value="Press here for instructions"></div>
+    <br>
+    <div>
         <table>
-            <tr align="center">
+            <tr>
                 <td>
-                    <div style="text-align: center">
+                    <div>
                         <h3>Please select a photo to upload to the header </h3>
                         <h5>(Only after you've finished editing all other pages)<br></h5>
-                        <div align="center" style="padding-left: 100px"><br>
-                            <input align="middle" type="file" name="file" id="file" style="text-align: center" onchange="addPicture(this)"><br>
+                        <div><br>
+                            <center>
+                            <input type="file" name="file" id="file" onchange="addPicture(this)"><br>
+                            </center>
                         </div>
                     </div>
                 </td>
@@ -228,6 +230,7 @@
                     <option value="green">green</option>
                     <option value="pink">pink</option>
                     <option value="red">red</option>
+                    <option value="#E1FAFF">light blue</option>
                 </select></td>
                 <td id="tdNoBorder2">
                     <div id="showColor"></div>

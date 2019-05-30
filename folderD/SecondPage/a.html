@@ -1,4 +1,4 @@
-<html id="mainP">
+<html lang="en" id="mainP">
 <head>
     <title> PHP HW3 TI </title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -11,8 +11,6 @@
     <script>
         var i = 0;
         $(document).ready(function () {
-            //if(localStorage.getItem('dcd') == undefined || localStorage.getItem('dcd') != ""){
-            //$("html").html(localStorage.getItem('dcd'));
             $('#tagColor').hide();
             $('#BB').hide();
             $('#CC').hide();
@@ -22,36 +20,37 @@
 
         function addPicture(e) {
             var fileId = e.name;
+            var str, res, p;
             if (fileId === "filebb") {
-                var str = document.getElementById("bFile").value;
-                var res = str.split("\\");
-                var p = document.getElementById('div1');
-                p.innerHTML = "<img src=\"..\\upload\\" + res[2] + "\"  height=\"200\" width=\"200\" >";
+                str = document.getElementById("bFile").value;
+                res = str.split("\\");
+                p = document.getElementById('div1');
+                p.innerHTML = "<img src=\"..\\upload\\" + res[2] + "\"  height=\"200\" width=\"200\" alt=''>";
             }
 
             if (fileId === "filedd") {
-                var str = document.getElementById("dFile").value;
-                var res = str.split("\\");
-                //var p = 	document.getElementById('div2');
-                //p.innerHTML="<img src=\"..\\upload\\"+res[2]+"\"  height=\"200\" width=\"200\" >";
+                str = document.getElementById("dFile").value;
+                res = str.split("\\");
+                p = document.getElementById('div2');
+                p.innerHTML = "<img src=\"..\\upload\\" + res[2] + "\"  height=\"200\" width=\"200\" alt=''>";
             }
             if (fileId === "fileff") {
-                var str = document.getElementById("fFile").value;
-                var res = str.split("\\");
-                //var p = 	document.getElementById('div3');
-                //p.innerHTML="<img src=\"..\\upload\\"+res[2]+"\"  height=\"200\" width=\"200\" >";
+                str = document.getElementById("fFile").value;
+                res = str.split("\\");
+                p = document.getElementById('div3');
+                p.innerHTML = "<img src=\"..\\upload\\" + res[2] + "\"  height=\"200\" width=\"200\" alt=''>";
             }
             if (fileId === "filehh") {
-                var str = document.getElementById("hFile").value;
-                var res = str.split("\\");
-                //var p = 	document.getElementById('div4');
-                //p.innerHTML="<img src=\"..\\upload\\"+res[2]+"\"  height=\"200\" width=\"200\" >";
+                str = document.getElementById("hFile").value;
+                res = str.split("\\");
+                p = document.getElementById('div4');
+                p.innerHTML = "<img src=\"..\\upload\\" + res[2] + "\"  height=\"200\" width=\"200\" alt=''>";
             }
             if (fileId === "filekk") {
-                var str = document.getElementById("kFile").value;
-                var res = str.split("\\");
-                //var p = 	document.getElementById('div5');
-                //p.innerHTML="<img src=\"..\\upload\\"+res[2]+"\"  height=\"200\" width=\"200\" >";
+                str = document.getElementById("kFile").value;
+                res = str.split("\\");
+                p = document.getElementById('div5');
+                p.innerHTML = "<img src=\"..\\upload\\" + res[2] + "\"  height=\"200\" width=\"200\" alt=''>";
             }
         }
 
@@ -130,6 +129,10 @@
                 $('#tagColor').show();
                 document.getElementById("showColor").style.backgroundColor = "purple";
             }
+            if (strUser === "#E1FAFF") {
+                $('#tagColor').show();
+                document.getElementById("showColor").style.backgroundColor = "#E1FAFF";
+            }
         }
 
         $(document).ready(function () {
@@ -164,15 +167,13 @@
                 $("#jjj").html("<textarea name=\"jjTextarea\" required></textarea>")
             });
         });
-
     </script>
 </head>
 
-<body vlink="#00008b" bgcolor="#f0f8ff">
+<body>
 <!--Main Form 	-->
 <form id="mainHeaderForm" action="../../folderC/MainA.php" method="post" enctype="multipart/form-data">
     <div style="text-align: center;"><h2>This is a new page</h2></div>
-    <!--header file 	-->
     <div style="text-align: center;">
         <table>
             <tr align="center">
@@ -188,34 +189,34 @@
         </table>
     </div>
 
-    <table align="center" width="78%" border=2 cellpadding="2">
+    <table>
         <tr id="AA">
-            <td id="aaa" align="center"><input type="button" id="aaText" value="press to add text"> <br></td>
-            <td id="bbb" align="center">
+            <td id="aaa"><input type="button" id="aaText" value="press to add text"><br></td>
+            <td id="bbb">
                 <div id="div1"></div>
                 <input id="bFile" type="file" name="filebb" onchange="addPicture(this)"><br><br></td>
         </tr>
         <tr id="BB">
-            <td id="ccc" align="center"><input type="button" id="ccText" value="press to add text"> <br></td>
-            <td id="ddd" align="center">
+            <td id="ccc"><input type="button" id="ccText" value="press to add text"><br></td>
+            <td id="ddd">
                 <div id="div2"></div>
                 <input id="dFile" type="file" name="filedd" onchange="addPicture(this)"> <br></td>
         </tr>
         <tr id="CC">
-            <td id="eee" align="center"><input type="button" id="eeText" value="press to add text"> <br></td>
-            <td id="fff" align="center">
+            <td id="eee"><input type="button" id="eeText" value="press to add text"> <br></td>
+            <td id="fff">
                 <div id="div3"></div>
                 <input id="fFile" type="file" name="fileff" onchange="addPicture(this)"> <br></td>
         </tr>
         <tr id="DD">
-            <td id="ggg" align="center"><input type="button" id="ggText" value="press to add text"> <br></td>
-            <td id="hhh" align="center">
+            <td id="ggg"><input type="button" id="ggText" value="press to add text"><br></td>
+            <td id="hhh">
                 <div id="div4"></div>
                 <input id="hFile" type="file" name="filehh" onchange="addPicture(this)"> <br></td>
         </tr>
         <tr id="EE">
-            <td id="jjj" align="center"><input type="button" id="jjText" value="press to add text"> <br></td>
-            <td id="kkk" align="center">
+            <td id="jjj"><input type="button" id="jjText" value="press to add text"> <br></td>
+            <td id="kkk">
                 <div id="div5"></div>
                 <input id="kFile" type="file" name="filekk" onchange="addPicture(this)"> <br></td>
         </tr>
@@ -239,6 +240,7 @@
                     <option value="black">black</option>
                     <option value="green">green</option>
                     <option value="pink">pink</option>
+                    <option value="#E1FAFF">light blue</option>
                     <option value="red">red</option>
                 </select></td>
                 <td id="tdNoBorder2">
@@ -249,10 +251,11 @@
     </div>
 
     <div>
-        <div align="center" id="tagColor">This will be the color of the background<br></div>
+        <div id="tagColor">This will be the color of the background<br></div>
         <hr>
-        <input type="button" id="save" value="Press here to save ">
-        <input type="button" id="load" value="Press here to load ">
+
+        <input type="button" id="save2" value="Press here to save ">
+        <input type="button" id="load2" value="Press here to load ">
 
         <input name="delB" type="hidden" id="delb" value="no">
         <input name="delC" type="hidden" id="delc" value="no">
@@ -261,7 +264,7 @@
 
         <h3><br>Remember to submit your work before moving from this page!<br></h3>
         <input type="submit" name="submit" value="Submit"><br>
-        <a href="../index.html"><span style="font-size: large; color: #002ab4; "><br>Press here to go to back<br></span></a>
+        <a href="../index.html"><h2><br>Press here to go to back<br></h2></a>
     </div>
 </form>
 </body>

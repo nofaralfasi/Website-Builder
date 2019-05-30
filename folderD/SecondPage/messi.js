@@ -11,11 +11,9 @@
 
 // Clase principal
 function Messi(data, options) {
-  
   var _this = this;
   _this.options = jQuery.extend({}, Messi.prototype.options, options || {});
-  
-  // preparamos el elemento
+
   _this.messi = jQuery(_this.template);
   _this.setContent(data);
   
@@ -37,16 +35,13 @@ function Messi(data, options) {
         });
         
         jQuery('.messi-titlebox', this.messi).prepend(close);
-        
-      };
-    
-    };
-    
-    if(_this.options.titleClass != null) jQuery('.messi-titlebox', this.messi).addClass(_this.options.titleClass);
-    
-  };
-  
-  // ajustamos el ancho
+
+}
+    }
+      if(_this.options.titleClass != null) jQuery('.messi-titlebox', this.messi).addClass(_this.options.titleClass);
+
+}
+    // ajustamos el ancho
   if(_this.options.width != null) jQuery('.messi-box', _this.messi).css('width', _this.options.width);
   
   // preparamos los botones
@@ -63,14 +58,10 @@ function Messi(data, options) {
       });
     
       jQuery('.messi-actions', this.messi).append(btn);
-    
-    };
-  
+    }
   } else {
-  
     jQuery('.messi-footbox', this.messi).remove();
-  
-  };
+  }
   
   // preparamos el bot?n de cerrar autom?ticamente
   if(_this.options.buttons.length === 0 && _this.options.title == null && !_this.options.autoclose) {
@@ -83,11 +74,10 @@ function Messi(data, options) {
       
       jQuery('.messi-content', this.messi).prepend(close);
       
-    };
+    }
     
-  };
-  
-  // activamos la pantalla modal
+  }
+
   _this.modal = (_this.options.modal) ? jQuery('<div class="messi-modal"></div>').css({opacity: _this.options.modalOpacity, width: jQuery(document).width(), height: jQuery(document).height(), 'z-index': _this.options.zIndex + jQuery('.messi').length}).appendTo(document.body) : null;
   
   // mostramos el mensaje
@@ -101,12 +91,10 @@ function Messi(data, options) {
     setTimeout(function(_this) {
       _this.hide();
     }, _this.options.autoclose, this);
-  };
-  
-  return _this;
-  
-};
+  }
+    return _this;
 
+}
 Messi.prototype = {
 
   options: {
@@ -185,11 +173,11 @@ Messi.prototype = {
   resize: function() {
     if(this.options.modal) {
       jQuery('.messi-modal').css({width: jQuery(document).width(), height: jQuery(document).height()});
-    };
-    if(this.options.center) {
+    }
+      if(this.options.center) {
       this.options.viewport = this.viewport(jQuery('.messi-box', this.messi));
       this.messi.css({top: this.options.viewport.top, left: this.options.viewport.left});
-    };
+    }
   },
   
   toggle: function() {

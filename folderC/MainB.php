@@ -4,7 +4,6 @@ $filename = "../folderD/b.html";
 if (isset($_FILES["file"]["tmp_name"])) {
     @move_uploaded_file($_FILES["file"]["tmp_name"], "../folderD/upload/" . $_FILES["file"]["name"]);
 }
-
 if (isset($_FILES["filebb"]["tmp_name"])) {
     @move_uploaded_file($_FILES["filebb"]["tmp_name"], "../folderD/upload/" . $_FILES["file"]["name"]);
 }
@@ -22,7 +21,7 @@ if (isset($_FILES["filekk"]["tmp_name"])) {
 }
 
 $fh = @fopen($filename, 'w') or die("can't open file");
-@fwrite($fh, '<html>  <body bgcolor=' . $_POST["colorPick"] . '>');
+@fwrite($fh, '<html lang="en">  <body bgcolor=' . $_POST["colorPick"] . '>');
 @fwrite($fh, ' <header ><img src="../folderD/upload/' . $_FILES["file"]["name"] . '" width="80%" height="300px"></header>   ');
 fwrite($fh, ' <table  width="80%" border =2 cellpadding="2" >');
 

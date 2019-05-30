@@ -20,7 +20,7 @@ table, th, td, tr {
     border: 1px solid black;
     border-collapse: collapse;
     align-items: center;
-    align-content: center;
+    /*align-content: center;*/
     text-align: center;
     width: 100%;
     padding: 10px;
@@ -45,7 +45,6 @@ tr:hover {
     padding: 20px;
     text-align: center;
     font-size: 30px;
-    /*color: white;*/
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -94,7 +93,7 @@ h6 {
     line-height: 20px;
 }
 
-#save, #load, #div1, #file, #mainHeaderForm, #info1 {
+#save, #load, #div1, #file, #mainHeaderForm, #info1, #save2, #load2 {
     align-self: center;
     text-align: center;
     font-size: 16px;
@@ -102,6 +101,11 @@ h6 {
     margin: 5px;
     align-content: center;
     alignment: center;
+}
+
+div {
+    alignment: center;
+    /*display: inline-block;*/
 }
 
 #del1, #add1 {
@@ -170,7 +174,6 @@ h6 {
     opacity: 0;
     text-align: center;
 }
-
 
 
 .messi {
