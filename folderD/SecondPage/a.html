@@ -6,6 +6,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="http://malsup.github.com/jquery.form.js"></script>
     <link href="messi.css" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet">
     <script src="messi.js"></script>
 
     <script>
@@ -24,33 +25,33 @@
             if (fileId === "filebb") {
                 str = document.getElementById("bFile").value;
                 res = str.split("\\");
-                p = document.getElementById('div1');
-                p.innerHTML = "<img class='minit' src=\"..\\upload\\" + res[2] + "\" alt=''>";
+                // p = document.getElementById('div1');
+                // p.innerHTML = "<img class='minit' src=\"..\\upload\\" + res[2] + "\" alt=''>";
             }
 
             if (fileId === "filedd") {
                 str = document.getElementById("dFile").value;
                 res = str.split("\\");
-                p = document.getElementById('div2');
-                p.innerHTML = "<img class='minit' src=\"..\\upload\\" + res[2] + "\" alt=''>";
+                // p = document.getElementById('div2');
+                // p.innerHTML = "<img class='minit' src=\"..\\upload\\" + res[2] + "\" alt=''>";
             }
             if (fileId === "fileff") {
                 str = document.getElementById("fFile").value;
                 res = str.split("\\");
-                p = document.getElementById('div3');
-                p.innerHTML = "<img class='minit' src=\"..\\upload\\" + res[2] + "\" alt=''>";
+                // p = document.getElementById('div3');
+                // p.innerHTML = "<img class='minit' src=\"..\\upload\\" + res[2] + "\" alt=''>";
             }
             if (fileId === "filehh") {
                 str = document.getElementById("hFile").value;
                 res = str.split("\\");
-                p = document.getElementById('div4');
-                p.innerHTML = "<img class='minit' src=\"..\\upload\\" + res[2] + "\" alt=''>";
+                // p = document.getElementById('div4');
+                // p.innerHTML = "<img class='minit' src=\"..\\upload\\" + res[2] + "\" alt=''>";
             }
             if (fileId === "filekk") {
                 str = document.getElementById("kFile").value;
                 res = str.split("\\");
-                p = document.getElementById('div5');
-                p.innerHTML = "<img class='minit' src=\"..\\upload\\" + res[2] + "\" alt=''>";
+                // p = document.getElementById('div5');
+                // p.innerHTML = "<img class='minit' src=\"..\\upload\\" + res[2] + "\" alt=''>";
             }
         }
 
@@ -74,7 +75,7 @@
                     $("#dele").val("yes");
                 }
             } else {
-                new Messi("Cant add more");
+                new Messi("Cannot add more");
             }
         }
 
@@ -98,7 +99,7 @@
                 }
                 i--;
             } else {
-                new Messi("Cant delete last one");
+                new Messi("Cannot delete last one");
             }
         }
 
