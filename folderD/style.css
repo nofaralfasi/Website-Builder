@@ -9,6 +9,7 @@ body {
     child-align: middle;
     text-align: center;
     align-self: center;
+    background-color: #fafbff;
     -webkit-text-size-adjust: 100%;
     -webkit-overflow-scrolling: touch;
     -webkit-font-smoothing: antialiased !important;
@@ -33,10 +34,10 @@ table {
 }
 
 div#showColor {
-    width: 75px;
+    width: 100px;
     height: 50px;
     background-color: #fef6ff;
-    margin: 0 0 15px 0;
+    margin: 5px;
     padding: 5px;
     border: #555555 1px solid;
 }
@@ -81,7 +82,6 @@ img.minit {
     width: 400px;
     height: 250px;
     object-fit: cover;
-
 }
 
 tr:hover {

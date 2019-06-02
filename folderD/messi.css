@@ -1,31 +1,5 @@
 /* Messi CSS */
 
-body {
-    margin-left: 10%;
-    margin-right: 10%;
-    align-content: center;
-    alignment: center;
-    align-items: center;
-    child-align: middle;
-    text-align: center;
-    align-self: center;
-    color: #282828;
-    /*background-color: #e1faff;*/
-    -webkit-text-size-adjust: 100%;
-    -webkit-overflow-scrolling: touch;
-    -webkit-font-smoothing: antialiased !important;
-}
-
-table, th, td, tr {
-    border: 1px solid black;
-    border-collapse: collapse;
-    align-items: center;
-    /*align-content: center;*/
-    text-align: center;
-    width: 100%;
-    padding: 10px;
-}
-
 #noBorder, #trNoBorder, #tdNoBorder1, #tdNoBorder2, #noBorder2, #trNoBorder3, #tdNoBorder4, #tdNoBorder5, #tdNoBorder7 {
     border: 0;
     border-collapse: collapse;
@@ -36,100 +10,9 @@ table, th, td, tr {
     width: 10%;
 }
 
-tr:hover {
-    background-color: #bde7ff;
-}
-
-.header {
-    background-color: #cceeff;
-    padding: 20px;
-    text-align: center;
-    font-size: 30px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    padding: 5px;
-    margin: 2px;
-    text-align: center;
-    align-content: center;
-    alignment: center;
-    align-items: center;
-}
-
-h1 {
-    text-transform: uppercase;
-    font-size: 36px;
-    line-height: 40px;
-}
-
-h2 {
-    font-size: 25px;
-    line-height: 35px;
-    margin: 1px;
-}
-
-h3 {
-    font-size: 21px;
-    line-height: 28px;
-    margin: 7px;
-    padding: 5px;
-}
-
-h4 {
-    font-size: 18px;
-    line-height: 24px;
-    margin: 7px;
-    padding: 5px;
-}
-
-h5 {
-    font-size: 14px;
-    line-height: 24px;
-}
-
-h6 {
-    font-size: 15px;
-    line-height: 20px;
-}
-
-#save, #load, #div1, #file, #mainHeaderForm, #info1, #save2, #load2 {
-    align-self: center;
-    text-align: center;
-    font-size: 16px;
-    padding: 5px;
-    margin: 5px;
-    align-content: center;
-    alignment: center;
-}
-
 div {
     alignment: center;
     /*display: inline-block;*/
-}
-
-#del1, #add1 {
-    font-size: 16px;
-    padding: 5px;
-    margin: 5px;
-}
-
-#showColor {
-    width: 100px;
-    height: 50px;
-    background-color: purple;
-}
-
-#selectColor {
-    width: 100px;
-    height: 50px;
-    padding-left: 5px;
-}
-
-#submit, #load {
-    padding: 5px;
-    width: 90px;
-    height: 40px;
 }
 
 #a, #b, #c, #d, #e, #file {
@@ -139,17 +22,6 @@ div {
 
 #FiveNameText, #FourNameText, #ThirdNameText, #SecNameText, #FirstNameText {
     text-align: center;
-}
-
-.btn1, .addPageName {
-    align-self: center;
-    padding: 5px;
-    text-align: center;
-    font-size: 16px;
-    margin: 1px;
-    align-content: center;
-    alignment: center;
-    align-items: center;
 }
 
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
