@@ -22,8 +22,8 @@ if (isset($_FILES["filekk"]["tmp_name"])) {
 }
 
 $fh = fopen($filename, 'w') or die("can't open file");
-fwrite($fh, '<html lang="en"><head><title>' . $_POST["aLink"] . '</title><link href="style.css" rel="stylesheet"></head>');
-fwrite($fh, '<body bgcolor=' . $_POST["colorPick"] . '>');
+fwrite($fh, '<html lang="en"><head><title>' . $_POST["delA"] . '</title><link href="style.css" rel="stylesheet"></head>');
+fwrite($fh, '<body bgcolor="' . $_POST["colorPick"] . '">');
 fwrite($fh, '<center><header><img class="main" src="upload/' . $_FILES["file"]["name"] . '"></header></center> ');
 
 fwrite($fh, '<center><table>');

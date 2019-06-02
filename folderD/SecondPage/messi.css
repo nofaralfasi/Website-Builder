@@ -40,11 +40,10 @@ table, th, td, tr {
 }
 
 tr:hover {
-  background-color: #bde7ff;
+  background-color: #f7e7f2;
 }
 
 .header {
-  background-color: #cceeff;
   padding: 20px;
   text-align: center;
   font-size: 30px;
@@ -98,12 +97,6 @@ h6 {
   line-height: 20px;
 }
 
-div, form {
-  /*alignment: center;*/
-  /*object-fit: cover;*/
-  /*display: inline-block;*/
-
-}
 
 #save, #load, #div1, #file, #mainHeaderForm, #info1 {
   align-self: center;
@@ -121,11 +114,6 @@ div, form {
   margin: 5px;
 }
 
-#showColor {
-  width: 100px;
-  height: 50px;
-  background-color: purple;
-}
 
 #selectColor {
   width: 100px;
