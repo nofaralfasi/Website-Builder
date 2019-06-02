@@ -7,6 +7,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="http://malsup.github.com/jquery.form.js"></script>
     <link href="messi.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <script src="messi.js"></script>
 
     <script>
@@ -119,29 +120,23 @@
         function change() {
             var e = document.getElementById("selectColor");
             var strUser = e.options[e.selectedIndex].value;
-            if (strUser === "black") {
-                //	$('#tagColor').show();
-                document.getElementById("showColor").style.backgroundColor = "black";
+            if (strUser === "#FEF6FF") {
+                document.getElementById("showColor").style.backgroundColor = "#FEF6FF";
             }
-            if (strUser === "red") {
-                //$('#tagColor').show();
-                document.getElementById("showColor").style.backgroundColor = "red";
+            if (strUser === "#feffef") {
+                document.getElementById("showColor").style.backgroundColor = "#feffef";
             }
-            if (strUser === "blue") {
-                //	$('#tagColor').show();
-                document.getElementById("showColor").style.backgroundColor = "blue";
+            if (strUser === "#F4FCFF") {
+                document.getElementById("showColor").style.backgroundColor = "#F4FCFF";
             }
-            if (strUser === "green") {
-                //$('#tagColor').show();
-                document.getElementById("showColor").style.backgroundColor = "green";
+            if (strUser === "#fff5fd") {
+                document.getElementById("showColor").style.backgroundColor = "#fff5fd";
             }
-            if (strUser === "pink") {
-               // $('#tagColor').show();
-                document.getElementById("showColor").style.backgroundColor = "pink";
+            if (strUser === "#F0FFF6") {
+                document.getElementById("showColor").style.backgroundColor = "#f0fff6";
             }
-            if (strUser === "purple") {
-                //$('#tagColor').show();
-                document.getElementById("showColor").style.backgroundColor = "purple";
+            if (strUser === "#F4F3FF") {
+                document.getElementById("showColor").style.backgroundColor = "#F4F3FF";
             }
             $('#save').click();
         }
@@ -169,13 +164,11 @@
                 $("#okButton").attr("pressedBy", $(this).attr("id"));
                 $('#myModal').modal('show');
             });
-
         });
     </script>
 </head>
 
-<body>
-<!--Main Form 	-->
+<body vlink="blue" style="background-color:#fafbff;">
 <form id="mainHeaderForm" action="../folderC/MainPage.php" method="post" enctype="multipart/form-data">
     <div><h2>This is your main page</h2></div>
     <br>
@@ -190,7 +183,7 @@
                         <h5>(Only after you've finished editing all other pages)<br></h5>
                         <div><br>
                             <center>
-                            <input type="file" name="file" id="file" onchange="addPicture(this)"><br>
+                                <input type="file" name="file" id="file" onchange="addPicture(this)"><br>
                             </center>
                         </div>
                     </div>
@@ -209,28 +202,27 @@
         </tr>
     </table>
 
-    <h3><br>Press these buttons if you want to delete or to add a cell</h3>
+    <h3><br>Press these buttons to delete or add pages:</h3>
     <input name="aLink" type="hidden" id="aLinkid" value="2">
     <input name="bLink" type="hidden" id="bLinkid" value="2">
     <input name="cLink" type="hidden" id="cLinkid" value="2">
     <input name="dLink" type="hidden" id="dLinkid" value="2">
     <input name="eLink" type="hidden" id="eLinkid" value="2">
-    <input id="del1" type="button" class="btn1" value="Delete a Cell" onclick="delRow()">
-    <input id="add1" type="button" class="btn1" value="Add a Cell" onclick="addRow()">
+    <input id="del1" type="button" class="btn1" value=" Delete Page " onclick="delRow()">
+    <input id="add1" type="button" class="btn1" value=" Add Page " onclick="addRow()">
 
     <hr>
-    <div><h3>Please select the color for the background</h3></div>
+    <div><h3>Please select the color for the background:</h3></div>
     <div align="center">
         <table id="noBorder">
             <tr id="trNoBorder">
                 <td id="tdNoBorder1"><label for="selectColor"></label><select id="selectColor" class="target" onchange="change()" name="colorPick">
-                    <option selected="selected" value="purple">purple</option>
-                    <option value="blue">blue</option>
-                    <option value="black">black</option>
-                    <option value="green">green</option>
-                    <option value="pink">pink</option>
-                    <option value="red">red</option>
-                    <option value="#E1FAFF">light blue</option>
+                    <option selected="selected" value="#FEF6FF"> Purple</option>
+                    <option value="#feffef"> Yellow</option>
+                    <option value="#F4FCFF"> Blue</option>
+                    <option value="#fff5fd"> Pink</option>
+                    <option value="#F0FFF6"> Green</option>
+                    <option value="#F4F3FF"> Lavender</option>
                 </select></td>
                 <td id="tdNoBorder2">
                     <div id="showColor"></div>
@@ -259,9 +251,10 @@
     </div>
 
     <hr>
-    <div style="text-align: center;"><div><h3>Press here to see your finished work!<br></h3></div><a href="1.html"><h2>YOUR FINISHED SITE</h2></a></div>
+    <div style="text-align: center;">
+        <div><h3>Press here to see your finished work!<br></h3></div>
+        <a href="1.html"><h2>YOUR FINISHED SITE</h2></a></div>
 </form>
-
 
 <div id="myModal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
      aria-hidden="true">

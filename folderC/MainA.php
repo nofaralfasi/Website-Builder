@@ -21,8 +21,8 @@ if (isset($_FILES["filekk"]["tmp_name"])) {
 }
 
 $fh = @fopen($filename, 'w') or die("can't open file");
-@fwrite($fh, '<html lang="en"> <head><title>' . $_POST["aLink"] . '</title><link href="style.css" rel="stylesheet"></head>');
-@fwrite($fh, '<body><script>$("body").css("background-color", "' . $_POST["colorPick"] . '");</script>');
+@fwrite($fh, '<html lang="en"><head><title>' . $_POST["aLink"] . '</title><link href="style.css" rel="stylesheet"></head>');
+@fwrite($fh, '<body bgcolor=' . $_POST["colorPick"] . '>');
 @fwrite($fh, '<center><header><img class="main" src="upload/' . $_FILES["file"]["name"] . '"></header></center> ');
 
 fwrite($fh, '<center><table>');
@@ -30,7 +30,7 @@ if ((@$_POST["aaTextarea"] != '' || isset($_FILES["filebb"]["tmp_name"])) && @$_
     fwrite($fh, '<tr><td align="center"><h1><p>' . $_POST["aaTextarea"] . '</p></h1></td>');
     @fwrite($fh, '<td align="center"><img class="minit" src="upload/' . $_FILES["filebb"]["name"] . '"></td></tr>');
 }
-if ((@$_POST["ccTextarea"] != '' || isset($_FILES["filedd"]["tmp_name"])) && @$_POST["delB"] != "no") {
+if ((@$_POST["bbtextarea"] != '' || isset($_FILES["filedd"]["tmp_name"])) && @$_POST["delB"] != "no") {
     fwrite($fh, '<tr><td align="center"><h1><p>' . $_POST["bbtextarea"] . '</p></h1></td>');
     @fwrite($fh, '<td align="center"><img class="minit" src="upload/' . $_FILES["filedd"]["name"] . '"></td></tr>');
 }
