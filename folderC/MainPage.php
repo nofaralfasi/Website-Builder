@@ -34,8 +34,4 @@ if ($_POST["eLink"] != "" && $_POST["eLink"] != 2) {
 fwrite($fh, '</tr></table>');
 fwrite($fh, '</center></body></html>');
 fclose($fh);
-//$myfile= @fopen("Gallery.html", "r") ordie("Unable to open file!");
-//echofread($myfile,filesize("Gallery.html"));
-//fclose($myfile);
-
 ?>
