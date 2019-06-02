@@ -3,6 +3,7 @@ $filename = "../folderD/a.html";
 
 if (isset($_FILES["file"]["tmp_name"])) {
     move_uploaded_file($_FILES["file"]["tmp_name"], "../folderD/upload/" . $_FILES["file"]["name"]);
+    echo tmp_name;
 }
 if (isset($_FILES["filebb"]["tmp_name"])) {
     move_uploaded_file($_FILES["filebb"]["tmp_name"], "../folderD/upload/" . $_FILES["file"]["name"]);
